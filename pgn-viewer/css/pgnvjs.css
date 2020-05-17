@@ -1,0 +1,1033 @@
+/*
+ * Chessground base css properties.
+ *
+ * You need to include the css files in themes folder in order to have the
+ * board and pieces displayed!
+ */
+
+.cg-board-wrap {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  display: block;
+}
+.cg-board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 0;
+  background-size: cover;
+  cursor: pointer;
+}
+.cg-board square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12.5%;
+  height: 12.5%;
+}
+.cg-board square.move-dest {
+  background: radial-gradient(rgba(20, 85, 30, 0.5) 22%, #208530 0, rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0) 0);
+}
+.cg-board square.premove-dest {
+  background: radial-gradient(rgba(20, 30, 85, 0.5) 22%, #203085 0, rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0) 0);
+}
+.cg-board square.oc.move-dest {
+  background: radial-gradient(transparent 0%, transparent 80%, rgba(20, 85, 0, 0.3) 80%);
+}
+.cg-board square.oc.premove-dest {
+  background: radial-gradient(transparent 0%, transparent 80%, rgba(20, 30, 85, 0.2) 80%);
+}
+.cg-board .cg-square.move-dest.drag-over,
+.cg-board .cg-square.premove-dest.drag-over {
+  box-shadow: inset 0 0 10px 2px rgba(216, 85, 0, 0.9);
+}
+.cg-board square.last-move {
+  will-change: transform;
+  background-color: rgba(155, 199, 0, 0.41);
+}
+.cg-board square.selected {
+  background-color: rgba(20, 85, 30, 0.5);
+}
+.cg-board square.check {
+  background: radial-gradient(ellipse at center, rgba(255, 0, 0, 1) 0%, rgba(231, 0, 0, 1) 25%, rgba(169, 0, 0, 0) 89%, rgba(158, 0, 0, 0) 100%);
+}
+.cg-board square.current-premove {
+  background-color: rgba(20, 30, 85, 0.5);
+}
+.cg-board piece {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12.5%;
+  height: 12.5%;
+  background-size: cover;
+  z-index: 2;
+  will-change: transform;
+}
+.cg-board piece.dragging {
+  cursor: move;
+  z-index: 9;
+}
+.cg-board piece.anim {
+  z-index: 8;
+}
+.cg-board piece.fading {
+  z-index: 1;
+  opacity: 0.5;
+}
+.cg-board-wrap div.over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(20, 85, 30, 0.3);
+}
+.cg-board-wrap piece.ghost {
+  opacity: 0.3;
+}
+.cg-board-wrap svg {
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.6;
+}
+.cg-board-wrap svg image {
+  opacity: 0.5;
+}
+.cg-board-wrap coords {
+  position: absolute;
+  display: flex;
+  pointer-events: none;
+  opacity: 0.8;
+  /* font-size: 9px; unset to allow different sizing ... */
+}
+.cg-board-wrap coords.ranks {
+  right: -15px;
+  top: 0;
+  flex-flow: column-reverse;
+  height: 100%;
+  width: 12px;
+}
+.cg-board-wrap coords.ranks.black {
+  flex-flow: column;
+}
+.cg-board-wrap coords.files {
+  bottom: -16px;
+  left: 0;
+  flex-flow: row;
+  width: 100%;
+  height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cg-board-wrap coords.files.black {
+  flex-flow: row-reverse;
+}
+.cg-board-wrap coords coord {
+  flex: 1 1 auto;
+}
+.cg-board-wrap coords.ranks coord {
+  transform: translateY(39%);
+}
+/*
+ * Board
+ */
+.blue .cg-board-wrap {
+  background-image: url(images/board/blue.svg);
+}
+.brown .cg-board-wrap {
+  background-image: url(images/board/brown.svg);
+}
+.zeit .cg-board-wrap {
+  background-image: url(images/board/zeit.svg);
+}
+.chesscom .cg-board-wrap {
+  background-image: url(images/board/chesscom.svg);
+}
+.informator .cg-board-wrap {
+  background-image: url(images/board/informator.svg);
+}
+.sportverlag .cg-board-wrap {
+  background-image: url(images/board/sportverlag.svg);
+}
+.beyer .cg-board-wrap {
+  background-image: url(images/board/beyer.svg);
+}
+.falken .cg-board-wrap {
+  background-image: url(images/board/falken.svg);
+}
+.green .cg-board-wrap {
+  background-image: url(images/board/green.svg);
+}
+
+/*
+ * Board
+ */
+.merida .cg-board piece.pawn.white {
+  background-image: url('images/pieces/merida/wP.svg');
+}
+.merida .cg-board piece.bishop.white {
+  background-image: url('images/pieces/merida/wB.svg');
+}
+.merida .cg-board piece.knight.white {
+  background-image: url('images/pieces/merida/wN.svg');
+}
+.merida .cg-board piece.rook.white {
+  background-image: url('images/pieces/merida/wR.svg');
+}
+.merida .cg-board piece.queen.white {
+  background-image: url('images/pieces/merida/wQ.svg');
+}
+.merida .cg-board piece.king.white {
+  background-image: url('images/pieces/merida/wK.svg');
+}
+.merida .cg-board piece.pawn.black {
+  background-image: url('images/pieces/merida/bP.svg');
+}
+.merida .cg-board piece.bishop.black {
+  background-image: url('images/pieces/merida/bB.svg');
+}
+.merida .cg-board piece.knight.black {
+  background-image: url('images/pieces/merida/bN.svg');
+}
+.merida .cg-board piece.rook.black {
+  background-image: url('images/pieces/merida/bR.svg');
+}
+.merida .cg-board piece.queen.black {
+  background-image: url('images/pieces/merida/bQ.svg');
+}
+.merida .cg-board piece.king.black {
+  background-image: url('images/pieces/merida/bK.svg');
+}
+
+/* Wikipedia */
+.wikipedia .cg-board piece.pawn.white {
+  background-image: url('../img/chesspieces/wikipedia/wP.png');
+}
+.wikipedia .cg-board piece.bishop.white {
+  background-image: url('../img/chesspieces/wikipedia/wB.png');
+}
+.wikipedia .cg-board piece.knight.white {
+  background-image: url('../img/chesspieces/wikipedia/wN.png');
+}
+.wikipedia .cg-board piece.rook.white {
+  background-image: url('../img/chesspieces/wikipedia/wR.png');
+}
+.wikipedia .cg-board piece.queen.white {
+  background-image: url('../img/chesspieces/wikipedia/wQ.png');
+}
+.wikipedia .cg-board piece.king.white {
+  background-image: url('../img/chesspieces/wikipedia/wK.png');
+}
+.wikipedia .cg-board piece.pawn.black {
+  background-image: url('../img/chesspieces/wikipedia/bP.png');
+}
+.wikipedia .cg-board piece.bishop.black {
+  background-image: url('../img/chesspieces/wikipedia/bB.png');
+}
+.wikipedia .cg-board piece.knight.black {
+  background-image: url('../img/chesspieces/wikipedia/bN.png');
+}
+.wikipedia .cg-board piece.rook.black {
+  background-image: url('../img/chesspieces/wikipedia/bR.png');
+}
+.wikipedia .cg-board piece.queen.black {
+  background-image: url('../img/chesspieces/wikipedia/bQ.png');
+}
+.wikipedia .cg-board piece.king.black {
+  background-image: url('../img/chesspieces/wikipedia/bK.png');
+}
+/* Alpha */
+.alpha .cg-board piece.pawn.white {
+  background-image: url('../img/chesspieces/alpha/wP.png');
+}
+.alpha .cg-board piece.bishop.white {
+  background-image: url('../img/chesspieces/alpha/wB.png');
+}
+.alpha .cg-board piece.knight.white {
+  background-image: url('../img/chesspieces/alpha/wN.png');
+}
+.alpha .cg-board piece.rook.white {
+  background-image: url('../img/chesspieces/alpha/wR.png');
+}
+.alpha .cg-board piece.queen.white {
+  background-image: url('../img/chesspieces/alpha/wQ.png');
+}
+.alpha .cg-board piece.king.white {
+  background-image: url('../img/chesspieces/alpha/wK.png');
+}
+.alpha .cg-board piece.pawn.black {
+  background-image: url('../img/chesspieces/alpha/bP.png');
+}
+.alpha .cg-board piece.bishop.black {
+  background-image: url('../img/chesspieces/alpha/bB.png');
+}
+.alpha .cg-board piece.knight.black {
+  background-image: url('../img/chesspieces/alpha/bN.png');
+}
+.alpha .cg-board piece.rook.black {
+  background-image: url('../img/chesspieces/alpha/bR.png');
+}
+.alpha .cg-board piece.queen.black {
+  background-image: url('../img/chesspieces/alpha/bQ.png');
+}
+.alpha .cg-board piece.king.black {
+  background-image: url('../img/chesspieces/alpha/bK.png');
+}
+/* Beyer */
+.beyer .cg-board piece.pawn.white {
+  background-image: url('../img/chesspieces/beyer/wP.png');
+}
+.beyer .cg-board piece.bishop.white {
+  background-image: url('../img/chesspieces/beyer/wB.png');
+}
+.beyer .cg-board piece.knight.white {
+  background-image: url('../img/chesspieces/beyer/wN.png');
+}
+.beyer .cg-board piece.rook.white {
+  background-image: url('../img/chesspieces/beyer/wR.png');
+}
+.beyer .cg-board piece.queen.white {
+  background-image: url('../img/chesspieces/beyer/wQ.png');
+}
+.beyer .cg-board piece.king.white {
+  background-image: url('../img/chesspieces/beyer/wK.png');
+}
+.beyer .cg-board piece.pawn.black {
+  background-image: url('../img/chesspieces/beyer/bP.png');
+}
+.beyer .cg-board piece.bishop.black {
+  background-image: url('../img/chesspieces/beyer/bB.png');
+}
+.beyer .cg-board piece.knight.black {
+  background-image: url('../img/chesspieces/beyer/bN.png');
+}
+.beyer .cg-board piece.rook.black {
+  background-image: url('../img/chesspieces/beyer/bR.png');
+}
+.beyer .cg-board piece.queen.black {
+  background-image: url('../img/chesspieces/beyer/bQ.png');
+}
+.beyer .cg-board piece.king.black {
+  background-image: url('../img/chesspieces/beyer/bK.png');
+}
+/* Case */
+.case .cg-board piece.pawn.white {
+  background-image: url('../img/chesspieces/case/wP.png');
+}
+.case .cg-board piece.bishop.white {
+  background-image: url('../img/chesspieces/case/wB.png');
+}
+.case .cg-board piece.knight.white {
+  background-image: url('../img/chesspieces/case/wN.png');
+}
+.case .cg-board piece.rook.white {
+  background-image: url('../img/chesspieces/case/wR.png');
+}
+.case .cg-board piece.queen.white {
+  background-image: url('../img/chesspieces/case/wQ.png');
+}
+.case .cg-board piece.king.white {
+  background-image: url('../img/chesspieces/case/wK.png');
+}
+.case .cg-board piece.pawn.black {
+  background-image: url('../img/chesspieces/case/bP.png');
+}
+.case .cg-board piece.bishop.black {
+  background-image: url('../img/chesspieces/case/bB.png');
+}
+.case .cg-board piece.knight.black {
+  background-image: url('../img/chesspieces/case/bN.png');
+}
+.case .cg-board piece.rook.black {
+  background-image: url('../img/chesspieces/case/bR.png');
+}
+.case .cg-board piece.queen.black {
+  background-image: url('../img/chesspieces/case/bQ.png');
+}
+.case .cg-board piece.king.black {
+  background-image: url('../img/chesspieces/case/bK.png');
+}
+/* Chesscom */
+.chesscom .cg-board piece.pawn.white {
+  background-image: url('../img/chesspieces/chesscom/wp.png');
+}
+.chesscom .cg-board piece.bishop.white {
+  background-image: url('../img/chesspieces/chesscom/wb.png');
+}
+.chesscom .cg-board piece.knight.white {
+  background-image: url('../img/chesspieces/chesscom/wn.png');
+}
+.chesscom .cg-board piece.rook.white {
+  background-image: url('../img/chesspieces/chesscom/wr.png');
+}
+.chesscom .cg-board piece.queen.white {
+  background-image: url('../img/chesspieces/chesscom/wq.png');
+}
+.chesscom .cg-board piece.king.white {
+  background-image: url('../img/chesspieces/chesscom/wk.png');
+}
+.chesscom .cg-board piece.pawn.black {
+  background-image: url('../img/chesspieces/chesscom/bp.png');
+}
+.chesscom .cg-board piece.bishop.black {
+  background-image: url('../img/chesspieces/chesscom/bb.png');
+}
+.chesscom .cg-board piece.knight.black {
+  background-image: url('../img/chesspieces/chesscom/bn.png');
+}
+.chesscom .cg-board piece.rook.black {
+  background-image: url('../img/chesspieces/chesscom/br.png');
+}
+.chesscom .cg-board piece.queen.black {
+  background-image: url('../img/chesspieces/chesscom/bq.png');
+}
+.chesscom .cg-board piece.king.black {
+  background-image: url('../img/chesspieces/chesscom/bk.png');
+}
+/* Condal */
+.condal .cg-board piece.pawn.white {
+  background-image: url('../img/chesspieces/condal/wP.png');
+}
+.condal .cg-board piece.bishop.white {
+  background-image: url('../img/chesspieces/condal/wB.png');
+}
+.condal .cg-board piece.knight.white {
+  background-image: url('../img/chesspieces/condal/wN.png');
+}
+.condal .cg-board piece.rook.white {
+  background-image: url('../img/chesspieces/condal/wR.png');
+}
+.condal .cg-board piece.queen.white {
+  background-image: url('../img/chesspieces/condal/wQ.png');
+}
+.condal .cg-board piece.king.white {
+  background-image: url('../img/chesspieces/condal/wK.png');
+}
+.condal .cg-board piece.pawn.black {
+  background-image: url('../img/chesspieces/condal/bP.png');
+}
+.condal .cg-board piece.bishop.black {
+  background-image: url('../img/chesspieces/condal/bB.png');
+}
+.condal .cg-board piece.knight.black {
+  background-image: url('../img/chesspieces/condal/bN.png');
+}
+.condal .cg-board piece.rook.black {
+  background-image: url('../img/chesspieces/condal/bR.png');
+}
+.condal .cg-board piece.queen.black {
+  background-image: url('../img/chesspieces/condal/bQ.png');
+}
+.condal .cg-board piece.king.black {
+  background-image: url('../img/chesspieces/condal/bK.png');
+}
+/* Leipzig */
+.leipzig .cg-board piece.pawn.white {
+  background-image: url('../img/chesspieces/leipzig/wP.png');
+}
+.leipzig .cg-board piece.bishop.white {
+  background-image: url('../img/chesspieces/leipzig/wB.png');
+}
+.leipzig .cg-board piece.knight.white {
+  background-image: url('../img/chesspieces/leipzig/wN.png');
+}
+.leipzig .cg-board piece.rook.white {
+  background-image: url('../img/chesspieces/leipzig/wR.png');
+}
+.leipzig .cg-board piece.queen.white {
+  background-image: url('../img/chesspieces/leipzig/wQ.png');
+}
+.leipzig .cg-board piece.king.white {
+  background-image: url('../img/chesspieces/leipzig/wK.png');
+}
+.leipzig .cg-board piece.pawn.black {
+  background-image: url('../img/chesspieces/leipzig/bP.png');
+}
+.leipzig .cg-board piece.bishop.black {
+  background-image: url('../img/chesspieces/leipzig/bB.png');
+}
+.leipzig .cg-board piece.knight.black {
+  background-image: url('../img/chesspieces/leipzig/bN.png');
+}
+.leipzig .cg-board piece.rook.black {
+  background-image: url('../img/chesspieces/leipzig/bR.png');
+}
+.leipzig .cg-board piece.queen.black {
+  background-image: url('../img/chesspieces/leipzig/bQ.png');
+}
+.leipzig .cg-board piece.king.black {
+  background-image: url('../img/chesspieces/leipzig/bK.png');
+}
+/* Maya */
+.maya .cg-board piece.pawn.white {
+  background-image: url('../img/chesspieces/maya/wP.png');
+}
+.maya .cg-board piece.bishop.white {
+  background-image: url('../img/chesspieces/maya/wB.png');
+}
+.maya .cg-board piece.knight.white {
+  background-image: url('../img/chesspieces/maya/wN.png');
+}
+.maya .cg-board piece.rook.white {
+  background-image: url('../img/chesspieces/maya/wR.png');
+}
+.maya .cg-board piece.queen.white {
+  background-image: url('../img/chesspieces/maya/wQ.png');
+}
+.maya .cg-board piece.king.white {
+  background-image: url('../img/chesspieces/maya/wK.png');
+}
+.maya .cg-board piece.pawn.black {
+  background-image: url('../img/chesspieces/maya/bP.png');
+}
+.maya .cg-board piece.bishop.black {
+  background-image: url('../img/chesspieces/maya/bB.png');
+}
+.maya .cg-board piece.knight.black {
+  background-image: url('../img/chesspieces/maya/bN.png');
+}
+.maya .cg-board piece.rook.black {
+  background-image: url('../img/chesspieces/maya/bR.png');
+}
+.maya .cg-board piece.queen.black {
+  background-image: url('../img/chesspieces/maya/bQ.png');
+}
+.maya .cg-board piece.king.black {
+  background-image: url('../img/chesspieces/maya/bK.png');
+}
+/* USCF */
+.uscf .cg-board piece.pawn.white {
+  background-image: url('../img/chesspieces/uscf/wP.png');
+}
+.uscf .cg-board piece.bishop.white {
+  background-image: url('../img/chesspieces/uscf/wB.png');
+}
+.uscf .cg-board piece.knight.white {
+  background-image: url('../img/chesspieces/uscf/wN.png');
+}
+.uscf .cg-board piece.rook.white {
+  background-image: url('../img/chesspieces/uscf/wR.png');
+}
+.uscf .cg-board piece.queen.white {
+  background-image: url('../img/chesspieces/uscf/wQ.png');
+}
+.uscf .cg-board piece.king.white {
+  background-image: url('../img/chesspieces/uscf/wK.png');
+}
+.uscf .cg-board piece.pawn.black {
+  background-image: url('../img/chesspieces/uscf/bP.png');
+}
+.uscf .cg-board piece.bishop.black {
+  background-image: url('../img/chesspieces/uscf/bB.png');
+}
+.uscf .cg-board piece.knight.black {
+  background-image: url('../img/chesspieces/uscf/bN.png');
+}
+.uscf .cg-board piece.rook.black {
+  background-image: url('../img/chesspieces/uscf/bR.png');
+}
+.uscf .cg-board piece.queen.black {
+  background-image: url('../img/chesspieces/uscf/bQ.png');
+}
+.uscf .cg-board piece.king.black {
+  background-image: url('../img/chesspieces/uscf/bK.png');
+}
+div.whole:focus {
+    /* The following suppresses the outline of the element that has the focus. Only when
+       that focus is set, the keyboard mappings work. You may of course enable the outline
+       for debugging purposes. */
+    outline: 0;
+}
+
+span.whiteHeader:before {
+    content: " White: ";
+}
+
+span.blackHeader:before {
+    content: " Black: ";
+}
+
+span.restHeader:before { content: " ("}
+span.restHeader:after { content: ")"}
+
+div.layout-left.whole, div.layout-right.whole {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+div.layout-left > .headers, div.layout-right > headers {
+    flex: 1 100%;
+}
+
+div.moves {
+    /* overflow-y: auto; */
+    padding: 10px;
+}
+div.layout-left > .moves, div.layout-right > .moves {
+    position: relative;
+    flex: 1 40%;
+}
+
+div.layout-left > .moves, div.layout-right > .moves, div.layout-top > .moves, div.layout-bottom > .moves {
+    overflow-y: auto;
+}
+
+div.layout-right > .moves {
+    order: 1;
+}
+
+div.layout-right > .outerBoard {
+    order: 2;
+    /* flex: 1 1 auto; */
+}
+
+div.layout-bottom.whole {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+div.layout-bottom > .outerBoard {
+    order: 2;
+}
+
+div.layout-top-left > .outerBoard {
+    float: left;
+    margin-right: 10px;
+}
+
+div.layout-bottom-left > .outerBoard {
+    float: left;
+    margin-right: 10px;
+    /* display: table-cell;
+    vertical-align: bottom; */
+}
+
+div.layout-top-right > .outerBoard {
+    float: right;
+    margin-left: 10px;
+}
+
+/* Not found any trick that allows to use baseline, bottom, ... with float: left|right */
+div.layout-bottom-right > .outerBoard {
+    float: right;
+    margin-left: 10px;
+}
+
+div.layout-left > .outerBoard div.edit .gray, div.buttons .gray {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+/** Font Awesome buttons (see http://fontawesome.io/) */
+
+.fen {
+    /* width: 96%; */
+    height: 30px;
+    min-height: 30px;
+    padding: 2px;
+    font-family: monospace;
+}
+
+div.error {
+    color: red;
+}
+div.buttons > i.button, div.edit > i.button {
+    font-size: 16px;
+    line-height: 1.4em;
+    color: #71a0df;
+    background-color: white;
+    background-image: none;
+     margin: 5px;
+    padding: 4px;
+    border: solid lightgrey 1px;
+    border-radius: 4px;
+}
+
+div.buttons > i.button.selected, div.edit > i.button.selected, .nagMenu.selected {
+    color: #fff;
+    background-color: #71a0df;
+}
+
+div.nagMenu {
+    border: 1px grey dotted;
+    display: none;
+    width: 600px;
+}
+
+div.nagMenu a {
+    text-decoration: none;
+}
+
+div.nagMove, div.nagObservation, div.nagPosition {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33.3%;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.nagMove i, .nagPosition i, .nagObservation i {
+    display: flex!important;
+    cursor: pointer;
+    transition: 0.13s;
+    align-items: center;
+    margin: 2px;
+}
+
+.nagMove i::before, .nagPosition i::before, .nagObservation i::before {
+    content: attr(data-symbol);
+    /* font-size: 1.2em; */
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    width: 30px;
+    text-align: center;
+    background: #f3f3f3;
+    padding: 2px 2px;
+    margin-right: 6px;
+    transition: 0.13s;
+}
+
+a.active i::before {
+    background: #71a0df!important;
+    color: #fff!important;
+}
+
+.nagMove i:hover, .nagPosition i:hover, .nagObservation i:hover {
+    background: #efefef;
+    color: #71a0df;
+}
+
+/* Necessary fixes for examples  */
+button.ui-multiselect {
+    background-image: none;
+    background-color: white;
+}
+
+ul.ui-multiselect-checkboxes > li {
+    margin-bottom: 0px;
+}
+
+select.nag {
+    width: 80px;
+}
+
+
+div.buttons > i.button:hover,div.edit > i.button:hover  {
+    cursor: pointer;
+    border: solid dimgrey 1px;
+}
+
+/** The following are all font-awesome buttons.
+  Where known, I have added their short names (to find them later again). **/
+div.buttons > .button.flipper.default:before { /* fa-adjust */
+    content: "\f042";
+}
+div.buttons > .button.first.default:before { /* fa-fast-backward */
+    content: "\f049";
+}
+div.buttons > .button.prev.default:before {    /* fa-step-backward */
+    content: "\f048";
+}
+div.buttons > .button.next.default:before {    /* fa-step-forward */
+    content: "\f051";
+}
+div.buttons > .button.last.default:before {    /* fa-fast-forward */
+    content: "\f050";
+}
+div.buttons > .button.play.default:before {    /* fa-play-circle */
+    content: "\f144";
+}
+div.buttons > .button.stop.default:before {     /* fa-pause */
+    content: "\f04c";
+}
+
+div.edit > .button.promoteVar.default:before { /* hand-o-up */
+    content: "\f0a6";
+}
+div.edit > .button.deleteMoves.default:before { /* scissors  */ 
+    content: "\f0c4";
+}
+
+.button.fa-times {
+   color: red;
+}
+
+.button.fa-times:hover {
+    border: red 2px solid;
+}
+
+textarea.pgn {
+    padding: 2px;
+    border: 1px solid grey;
+    width: 96%;
+    height: 100px;
+    font-family: monospace;
+}
+
+/* Green buttons. */
+div.buttons.green > .button, div.edit.green > .button {
+    color: green;
+    border: solid lightgrey 1px;
+    border-radius: 4px;
+}
+/* Blue buttons. */
+div.buttons.blue > .button, div.edit.blue > .button {
+    color: blue;
+    border: solid lightgrey 1px;
+    border-radius: 4px;
+}
+
+.ui-widget {
+    font-size: 1em;
+}
+
+div.commentRadio label {
+    display: inline;
+}
+div.comment > textarea.comment {
+    font-family: monospace;
+    width: 96%;
+    height: 50px;
+    padding: 2px;
+}
+
+.moves a {
+    text-decoration: underline;
+}
+
+.moves .move a.yellow {
+    background-color: rgba(255, 255, 153, 1.0);
+}
+
+.moves .move a {
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+.moves .move a:hover {
+    border: 1px yellow dotted;
+    background-color: rgba(255, 255, 153, 1.0);
+    cursor: crosshair;
+}
+
+.moves .move {
+    font-size: 16px;
+    font-family: Georgia, "Bitstream Charter", serif;;
+    color: black;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.moves .move.var {
+    font-weight: 500;
+}
+
+.moves .variation {
+    font-size: 100%;
+    display: block;
+    padding: 5px;
+}
+.moves .variation:before {
+    content: ' ( ';
+}
+
+.moves .variation .variation:before {
+    content: ' ( ';
+}
+
+.moves .variation .variation {
+    font-size: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.moves .variation .variation:after {
+    content: ' ) ';
+}
+
+.moves .variation:after {
+    content: ' ) ';
+}
+
+.moves > .varblock .white:before {
+    display: inline;
+}
+
+.moves .move .comment {
+    color: green;
+    font-weight: 500;
+}
+
+.moves .white:before {
+    content: '\A';
+    display: inline-block;
+}
+
+/* Pattern of the Chess.com similar */
+/* board */
+.chesscom.whole {
+    /*    border: 2px solid #404040; */
+    border: 2px gray solid;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.chesscom .headers {
+    font-family: "Lucida Grande", Verdana, Arial, "Bitstream Vera Sans", sans-serif;
+    font-size: 18px;
+/*    padding: 15px;*/
+    background-color: #f3f3f3;
+    font-weight: bold;
+    flex: 1 100%;
+}
+
+.chesscom .headers > .whiteHeader:before {
+    content: "";
+}
+
+.chesscom .headers > .whiteHeader {
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.chesscom .headers > .blackHeader:before {
+    content: "  vs. ";
+}
+
+.chesscom .headers > .blackHeader {
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.chesscom .headers > .restHeader {
+    display: block;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 80%;
+}
+
+.chesscom .players {
+    font-weight: 900;
+}
+
+.chesscom .outerBoard {
+    /* float: left; */
+    width: 388px;
+}
+
+/* .chesscom .movesScroller {
+    padding: 3px 3px;
+    font-size: 13px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-weight: bold;
+    border-right: 2px solid #f3f3f3;
+    background: #ffffff;
+    vertical-align: baseline;
+    text-align: left;
+    overflow: auto;
+} */
+
+
+.moves {
+    /*  position: relative;
+    overflow-y: auto;*/
+    padding: 10px;
+}
+
+.chesscom .endBoard {
+    clear: both;
+}
+.chesscom .moves a {
+    text-decoration: none;
+}
+
+/**
+  CHESSGROUND changes.
+  */
+ 
+.cg-board-wrap.coords-inner {
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+.cg-board-wrap {
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+.cg-board-wrap.coords-inner coords.ranks {
+    right: -2px;
+}
+.cg-board-wrap.coords-inner coords.files {
+    bottom: 2px;
+    left: 2px;
+    text-align: left;
+}
+.cg-board-wrap coords.files {
+    text-transform: none;
+}
+
+/* board and colorMarker */
+.boardAnd {
+    /*
+    display: grid;
+    grid-template-columns: 400px 40px;
+    */
+}
+
+.board {
+    /*order: 2;*/
+}
+
+.colorMarker {
+    width: 20px; height: 20px;
+    border-color: black;
+    border-width: 2px;
+    border-style: double;
+    margin: 10px;
+    /*order: 1; */
+}
+
+.colorMarker.circle {
+    border-radius: 10px;
+}
+
+.colorMarker.circle-big {
+    border-radius: 20px;
+    width: 40px; height: 40px;
+}
+
+.colorMarker.circle-small {
+    border-radius: 5px;
+    width: 10px; height: 10px;
+}
+
+.cm-black {
+    background-color: black;
+}
+
+.cm-white {
+    background-color: white;
+}
+
+.cm-big {
+    width: 40px; height: 40px;   
+}
+
+.cm-small {
+    width: 10px; height: 10px;
+}
