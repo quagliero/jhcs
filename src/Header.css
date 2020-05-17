@@ -1,12 +1,5 @@
 .header {
   padding: 2rem;
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(255,255,255,.75),
-      rgba(255,255,255,.75)
-    ),
-    url(./lewis-chess.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -17,6 +10,28 @@
   align-items: center;
   overflow: hidden;
   font-family: Patua One, serif;
+  position: relative;
+  text-align: center;
+}
+
+.headerBg {
+  position: absolute;
+}
+
+.headerBg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,.75),
+      rgba(255,255,255,.10)
+    );
 }
 
 .header > h1 {
@@ -25,10 +40,12 @@
   font-size: 2.5rem;
   color: #303030;
   font-weight: normal;
+  position: relative;
 }
 
 .header > h2 {
   margin-top: 1rem;
   font-weight: normal;
   color: #202020;
+  position: relative;
 }
