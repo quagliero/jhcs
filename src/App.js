@@ -15,7 +15,7 @@ function App() {
     [Event "Lord of the Rings"]
     [Result "0-1"]
     1.e4 d5 2.Nc3 Nf6 3.Bb5+ Nc6 4.Qe2 a6 5.Ba4 b5 6.Bb3 Nd4 7.Qd3 e5 8.Nf3 dxe4 9.Qe3 exf3 10.Qxe5+ Be7 11.O-O Bf5 12.d3 O-O 13.Qe1 Qd6 14.g3 Bh3 15.Bf4 Qc6 16.Qxe7 Ne6 17.Rfe1 Rfe8 18.Qa3 Bg2 19.Qb4 Rad8 20.h4 Rd4 21.Qa5 Ng4 22.Bxe6 Ra4 23.Qxc7 Qxc7 24.Bxc7 fxe6 25.b3 Rc8 26.Bb8 g5 27.bxa4 Rxb8 28.Re4 h5 29.hxg5 Rc8 30.Nb1 Rf8 31.Rxe6 Kg7 32.Rxa6 Re8 33.Na3 Re2 34.Nxb5 h4 35.gxh4 Rxf2 36.h5 Bh3 37.Ra7+ Kf8 38.h6 Rg2+ 39.Kh1 Nf2# 0-1`,
-    `[Date "2020-06-07"]
+    `[Date "2020-05-07"]
     [White "Titan"]
     [Black "Iceman"]
     [Event "Game of Thrones"]
