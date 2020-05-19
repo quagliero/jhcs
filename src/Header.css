@@ -34,6 +34,12 @@
     );
 }
 
+.header h1,
+.header h2,
+.header h3 {
+  position: relative;
+}
+
 .header > h1 {
   margin-top: 0;
   margin-bottom: 0;
@@ -45,7 +51,16 @@
 
 .header > h2 {
   margin-top: 1rem;
+  margin-bottom: 0;
   font-weight: normal;
   color: #202020;
   position: relative;
+}
+
+.header > h3 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 2rem;
+  color: #101010;
 }
