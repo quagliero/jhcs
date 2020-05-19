@@ -21,8 +21,13 @@ function App() {
     [Event "Game of Thrones"]
     [Result "2-1"]
     1.d4 d5 2.c4 e6 3.Nc3 Nc6 4.Nf3 Bb4 5.Bg5 Qd7 6.e4 h6 7.Bd2 Nf6 8.Bd3 O-O 9.a3 Ba5 10.Be3 dxe4 11.Ne5 Nxe5 12.Be2 Nc6 13.O-O b6 14.f3 exf3 15.Bxf3 Bb7 16.Nb5 a6 17.Nc3 b5 18.cxb5 Bxc3 19.bxc6 Bxc6 20.bxc3 Nd5 21.Qd2 f5 22.c4 Nb6 23.Rac1 g5 24.Bh5 f4 25.Bf2 e5 26.c5 Na4 27.Qa2+ Qd5 28.Qc4 Kh8 29.Bd1 Qxg2# 1-0`,
+    `[Date "2020-05-16"]
+    [White "Iceman"]
+    [Black "Titan"]
+    [Result "3-1"]
+    [Event "The Empire Strikes Back"]
+    1.e4 e5 2.Nc3 d6 3.Qe2 Nc6 4.b3 Nf6 5.Ba3 Nd4 6.Qd3 c5 7.O-O-O d5 8.exd5 c4 9.Qxc4 Bxa3+ 10.Kb1 O-O 11.Qa4 Qd6 12.Nf3 Ng4 13.Re1 Qb4 14.Qxb4 Bxb4 15.Nxe5 Nxf2 16.Rg1 f6 17.Nd3 Bxc3 18.Nxf2 Bxd2 19.Rd1 Be3 20.Nh3 Nf5 21.Bc4 Nd6 22.Rge1 Re8 23.Rd3 Bxh3 24.Rdxe3 Rxe3 25.Rxe3 Bxg2 26.Bd3 Bxd5 27.Re2 Rc8 28.c4 Bf7 29.h4 Re8 30.Kb2 Rxe2+ 31.Bxe2 Nf5 32.a4 b6 33.b4 Be8 34.Ka3 g5 35.hxg5 fxg5 36.c5 Nd4 37.Bd3 g4 38.Be4 Bc6 39.Bxc6 Nxc6 40.Kb3 g3 41.Kc2 g2 42.Kd2 g1=Q 43.Kc3 Qxc5+ 44.Kb2 Nd4 45.Ka2 Qc2+ 46.Ka1 Nb3# 0-1`,
   ];
-
 
 
   useEffect(() => {
@@ -34,12 +39,14 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <div className="games">
-        {games.map((g, i) => (
-          <div className="game">
-            <div id={`board${i}`}/>
-          </div>
-        ))}
+      <div className="container">
+        <div className="games">
+          {games.map((g, i) => (
+            <div className="game">
+              <div id={`board${i}`}/>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

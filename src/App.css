@@ -8,22 +8,44 @@ body {
   background-color: #f8f8f8;
 }
 
-.games {
-  display: flex;
-  flex-wrap: wrap;
+.container {
   max-width: 1600px;
-  padding: 3rem 0;
-  gap: 1rem;
   margin: 0 auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.games {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(355px, auto));
+  max-width: 100%;
+  padding: 3rem 0;
   color: #292929;
 }
 
 .game {
-  flex: 1;
-  padding: 2rem;
+  padding: 0;
   background-color: white;
   border: 1px solid #eee;
-  margin: 0.5rem;
+}
+
+@media screen and (min-width: 376px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .games {
+    grid-gap: 10px;
+  }
+  .game {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .game {
+    padding: 2rem;
+  }
 }
 
 .game .headers {

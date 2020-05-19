@@ -16,7 +16,7 @@ const Header = ({
         <img src={lewisChessJpg} alt="Lewis Chessmen"/>
       </picture>
       <h1>{title || "♟️ John Harrison Championship Series ♟️"}</h1>
-      {<h2>{subtitle || "Harison-Denby vs. Harrison, Correspondence 2020."}</h2>}
+      <h2>{subtitle || "Harison-Denby vs. Harrison, Correspondence 2020."}</h2>
       <h3>{'3 - 1'}</h3>
     </header>
   );
