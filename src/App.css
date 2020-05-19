@@ -18,7 +18,7 @@ body {
 .games {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(355px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(355px, auto));
   max-width: 100%;
   padding: 3rem 0;
   color: #292929;
@@ -82,6 +82,7 @@ body {
   width: 100%;
   margin-top: 0.5rem;
   text-align: center;
+  font-size: 1rem;
 }
 
 .game .outerBoard {
