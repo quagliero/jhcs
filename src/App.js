@@ -42,7 +42,10 @@ function App() {
       <div className="container">
         <div className="games">
           {games.map((g, i) => (
-            <div className="game">
+            <div
+              className="game"
+              key={i}
+            >
               <div id={`board${i}`}/>
             </div>
           ))}

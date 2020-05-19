@@ -11,8 +11,8 @@ const Header = ({
   return (
     <header className="header">
       <picture className="headerBg">
-        <source srcset={lewisChessWebp} type="image/webp"/>
-        <source srcset={lewisChessJpg} type="image/jpeg"/>
+        <source srcSet={lewisChessWebp} type="image/webp"/>
+        <source srcSet={lewisChessJpg} type="image/jpeg"/>
         <img src={lewisChessJpg} alt="Lewis Chessmen"/>
       </picture>
       <h1>{title || "♟️ John Harrison Championship Series ♟️"}</h1>
