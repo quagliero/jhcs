@@ -17,7 +17,7 @@ const Header = ({
       </picture>
       <h1>{title || "♟️ John Harrison Championship Series ♟️"}</h1>
       <h2>{subtitle || "Harison-Denby vs. Harrison, Correspondence 2020."}</h2>
-      <h3>{'4 - 1'}</h3>
+      <h3>{'4 - 2'}</h3>
     </header>
   );
 };

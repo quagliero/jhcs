@@ -8,6 +8,7 @@ function App() {
     [Result "1-0"]
     [White "Titan"]
     [Black "Iceman"]
+    [Event "The Cagey Opener"]
     1.d4 Nc6 2.d5 Nb4 3.a3 Na6 4.e4 e5 5.dxe6 fxe6 6.Qh5+ g6 7.Qe5 Qf6 8.Qa5 b6 9.Qc3 Bb7 10.Nh3 O-O-O 11.Bg5 Qg7 12.Nd2 Kb8 13.Bxd8 c5 14.Nf3 h6 15.Ne5 Bc8 16.Rd1 d6 17.Nc4 Bb7 18.Nxd6 Bxd6 19.Rxd6 Qxc3+ 20.bxc3 Bxe4 21.Bxa6 Nf6 22.Bxf6 Kc7 23.Rxe6 Rf8 24.f3 Bxc2 25.Be5+ Kd7 26.Rd6+ Ke7 27.O-O Ba4 28.Rxg6 Kf7 29.Rxh6 Bb3 30.Ng5+ Ke8 31.Bc8 1-0`,
     `[Date "2020-04-26"]
     [White "Iceman"]
@@ -31,7 +32,14 @@ function App() {
     [Result "4-1"]
     [White "Titan"]
     [Black "Iceman"]
+    [Event "A Misplaced Knight"]
     1.d4 d5 2.c4 dxc4 3.Bf4 b5 4.a4 a6 5.e3 Nf6 6.axb5 Bg4 7.Be2 h5 8.Qa4 Qd7 9.Nc3 g6 10.bxa6 Nc6 11.Nf3 Bh6 12.Bxh6 Rxh6 13.O-O h4 14.Rfd1 Nxd4 15.Rxd4 Qxa4 16.Rxa4 h3 17.Nb5 hxg2 18.Rf4 Nd7 19.Rd4 Ne5 20.Nxe5 Bxe2 21.Nxc7+ Kf8 22.Nxa8 Kg7 23.Kxg2 f6 24.Nxc4 g5 25.Nc7 g4 26.Ne6+ Kf7 27.a7 Bf3+ 28.Kg1 Kxe6 29.e4 f5 30.a8=Q Kf7 31.Ne5+ Kf6 32.Nd7+ Kg5 33.Qf8 Rh3 34.Ra3 e5 35.Qxf5+ Kh4 36.Nxe5 Rxh2 37.Ng6+ Kh3 38.Qh5# 0-1`,
+    `[Date "2020-05-30"]
+    [Result "4-2"]
+    [White "Iceman"]
+    [Black "Titan"]
+    [Event "Titanic Footle"]
+    1.e3 g5 2.Bc4 d5 3.Bb3 b5 4.Nc3 c6 5.e4 b4 6.Na4 e5 7.exd5 cxd5 8.c3 bxc3 9.bxc3 d4 10.Qe2 Nc6 11.Bb2 Nf6 12.O-O-O Qa5 13.h4 Bh6 14.hxg5 Bxg5 15.Nf3 Rg8 16.cxd4 Nxd4 17.Nxd4 Bg4 18.f3 O-O-O 19.Qc4+ Qc7 20.Nb5 Be6 21.Qxc7# 1-0`,
   ];
 
 
