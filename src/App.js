@@ -40,6 +40,13 @@ function App() {
     [Black "Titan"]
     [Event "Titanic Footle"]
     1.e3 g5 2.Bc4 d5 3.Bb3 b5 4.Nc3 c6 5.e4 b4 6.Na4 e5 7.exd5 cxd5 8.c3 bxc3 9.bxc3 d4 10.Qe2 Nc6 11.Bb2 Nf6 12.O-O-O Qa5 13.h4 Bh6 14.hxg5 Bxg5 15.Nf3 Rg8 16.cxd4 Nxd4 17.Nxd4 Bg4 18.f3 O-O-O 19.Qc4+ Qc7 20.Nb5 Be6 21.Qxc7# 1-0`,
+    `[Date "2020-06-09"]
+    [Result "4-3"]
+    [White "Titan"]
+    [Black "Iceman"]
+    [Event "Harry Potter"]
+    1.d4 Nc6 2.Nf3 e6 3.e4 Bb4+ 4.c3 Ba5 5.Bd3 Qe7 6.b4 Bb6 7.a4 a5 8.b5 Nd8 9.Be3 d5 10.e5 Nh6 11.Bxh6 gxh6 12.c4 c5 13.bxc6 Nxc6 14.O-O dxc4 15.Bxc4 Rg8 16.Qd3 Rg7 17.Nc3 Bd7 18.Rab1 Nb4 19.Qe4 Bc6 20.d5 exd5 21.Nxd5 Bxd5 22.Bxd5 O-O-O 23.Rfc1+ Kb8 24.Rd1 h5 25.Nh4 Rdg8 26.g3 Rg4 27.Qxh7 Qxh4 28.Qxf7 Rxg3+ 29.Bg2 Rxg2+ 30.Kf1 Rxf2+ 31.Ke1 Rg1# 1-0
+    `,
   ];
 
 
