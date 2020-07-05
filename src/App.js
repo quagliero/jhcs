@@ -52,6 +52,12 @@ function App() {
     [Black "Titan"]
     [Event "Fußball"]
     1.e3 e5 2.d4 exd4 3.exd4 d5 4.Qe2+ Qe7 5.Nf3 Bf5 6.Bg5 Qxe2+ 7.Bxe2 Bxc2 8.Nc3 Be4 9.Nxe4 dxe4 10.Ne5 Nf6 11.O-O-O Nbd7 12.Bc4 Nxe5 13.dxe5 Ng4 14.e6 f6 15.Be3 Nxe3 16.fxe3 Rd8 17.Rd7 Rxd7 18.exd7+ Kxd7 19.Rd1+ Bd6 20.h4 f5 21.Be2 Ke7 22.g4 g6 23.Rd4 Bc5 24.Ra4 Bxe3+ 25.Kb1 Kd6 26.Rb4 b6 27.Ra4 a5 28.b4 Re8 29.bxa5 f4 30.a6 f3 31.Bd1 Ke5 32.a7 Ra8 33.h5 b5 34.Ra5 Bxa7 35.Rxb5+ Kf4 36.Rb7 Bb6 37.hxg6 hxg6 38.Kb2 e3 39.Kc2 Rxa2+ 40.Kb1 Rd2 41.Kc1 f2 42.Rb8 Bc5 43.Rf8+ Bxf8 44.Be2 Rxe2 45.g5 Ba3+ 46.Kd1 f1=Q# 0-1`,
+    `[Date "2020-07-05"]
+    [Result "6-3"]
+    [White "Titan"]
+    [Black "Iceman"]
+    [Event "Two Dimensional Chess"]
+    1.d4 Nc6 2.d5 Nb8 3.e4 d6 4.c4 Nf6 5.Nc3 g6 6.Nf3 h5 7.Be3 Bg4 8.c5 dxc5 9.Qa4+ Nbd7 10.Ng5 b5 11.Bxb5 Qc8 12.Ba6 Qb8 13.Rb1 Bh6 14.h3 Bf5 15.exf5 gxf5 16.f4 O-O 17.Bd3 Nb6 18.Qd1 Qc8 19.Bxc5 Re8 20.O-O e6 21.Bd4 Bg7 22.Bxf6 Bxf6 23.Qxh5 Bd4+ 24.Kh2 Kf8 25.Qxf7# 1-0`
   ];
 
 
