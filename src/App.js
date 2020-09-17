@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import './App.css';
 
 function App() {
+  const [ score, setScore ] = useState('0-0');
+
   const games = [
     `[Date "2020-04-07"]
     [Result "1-0"]
@@ -57,19 +59,29 @@ function App() {
     [White "Titan"]
     [Black "Iceman"]
     [Event "Two Dimensional Chess"]
-    1.d4 Nc6 2.d5 Nb8 3.e4 d6 4.c4 Nf6 5.Nc3 g6 6.Nf3 h5 7.Be3 Bg4 8.c5 dxc5 9.Qa4+ Nbd7 10.Ng5 b5 11.Bxb5 Qc8 12.Ba6 Qb8 13.Rb1 Bh6 14.h3 Bf5 15.exf5 gxf5 16.f4 O-O 17.Bd3 Nb6 18.Qd1 Qc8 19.Bxc5 Re8 20.O-O e6 21.Bd4 Bg7 22.Bxf6 Bxf6 23.Qxh5 Bd4+ 24.Kh2 Kf8 25.Qxf7# 1-0`
+    1.d4 Nc6 2.d5 Nb8 3.e4 d6 4.c4 Nf6 5.Nc3 g6 6.Nf3 h5 7.Be3 Bg4 8.c5 dxc5 9.Qa4+ Nbd7 10.Ng5 b5 11.Bxb5 Qc8 12.Ba6 Qb8 13.Rb1 Bh6 14.h3 Bf5 15.exf5 gxf5 16.f4 O-O 17.Bd3 Nb6 18.Qd1 Qc8 19.Bxc5 Re8 20.O-O e6 21.Bd4 Bg7 22.Bxf6 Bxf6 23.Qxh5 Bd4+ 24.Kh2 Kf8 25.Qxf7# 1-0`,
+    `[Date "2020-07-19"]
+    [Result "7-3"]
+    [White "Iceman"]
+    [Black "Titan"]
+    [Event "A Long Summer Knight"]
+    1.e4 d6 2.f3 Nf6 3.d4 e6 4.e5 dxe5 5.dxe5 Qxd1+ 6.Kxd1 Nd5 7.c4 Ne7 8.Nc3 h5 9.Nb5 Na6 10.Bd2 g6 11.f4 Bd7 12.Be2 Nc6 13.g4 O-O-O 14.Rc1 Nd4 15.Nxd4 hxg4 16.Bxg4 Rh4 17.Bf3 Bh6 18.Nge2 c5 19.Nb3 Ba4 20.Rc2 Nb4 21.a3 Nd3 22.Nxc5 Nxc5 23.Kc1 Nb3+ 24.Kb1 Nxd2+ 25.Rxd2 Rxd2 26.Nc3 Bb3 27.Nb5 Rxf4 28.Nxa7+ Kb8 29.Nc6+ Kc7 30.Na5 Bc2+ 31.Ka2 Rxf3 32.Rc1 Rxh2 33.Ra1 Bd2 34.b4 b6 35.Rb1 bxa5 36.bxa5 Bxb1+ 37.Kxb1 Rh1+ 38.Kc2 Rf2 39.a6 Rc1+ 40.Kd3 Rc3+ 41.Kd4 Kc6 42.a7 Rf4# 0-1`,
   ];
 
 
   useEffect(() => {
     games.forEach((g, i) => {
       window.pgnView(`board${i}`, { pgn: g, width: null, layout: 'left', theme: 'zeit', pieceStyle: 'merida' });
+      // get the result from the most recent game
+      if (i === (games.length - 1)) {
+        setScore(g.match(/"\w-\w"/)[0].replaceAll('"', ''));
+      }
     });
   });
 
   return (
     <div className="App">
-      <Header/>
+      <Header score={score}/>
       <div className="container">
         <div className="games">
           {games.map((g, i) => (

@@ -6,6 +6,7 @@ import './Header.css';
 const Header = ({
   title,
   subtitle,
+  score,
 }) => {
 
   return (
@@ -17,7 +18,7 @@ const Header = ({
       </picture>
       <h1>{title || "♟️ John Harrison Championship Series ♟️"}</h1>
       <h2>{subtitle || "Harison-Denby vs. Harrison, Correspondence 2020."}</h2>
-      <h3>{'6 - 3'}</h3>
+      <h3>{score}</h3>
     </header>
   );
 };
