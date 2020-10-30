@@ -66,6 +66,19 @@ function App() {
     [Black "Titan"]
     [Event "A Long Summer Knight"]
     1.e4 d6 2.f3 Nf6 3.d4 e6 4.e5 dxe5 5.dxe5 Qxd1+ 6.Kxd1 Nd5 7.c4 Ne7 8.Nc3 h5 9.Nb5 Na6 10.Bd2 g6 11.f4 Bd7 12.Be2 Nc6 13.g4 O-O-O 14.Rc1 Nd4 15.Nxd4 hxg4 16.Bxg4 Rh4 17.Bf3 Bh6 18.Nge2 c5 19.Nb3 Ba4 20.Rc2 Nb4 21.a3 Nd3 22.Nxc5 Nxc5 23.Kc1 Nb3+ 24.Kb1 Nxd2+ 25.Rxd2 Rxd2 26.Nc3 Bb3 27.Nb5 Rxf4 28.Nxa7+ Kb8 29.Nc6+ Kc7 30.Na5 Bc2+ 31.Ka2 Rxf3 32.Rc1 Rxh2 33.Ra1 Bd2 34.b4 b6 35.Rb1 bxa5 36.bxa5 Bxb1+ 37.Kxb1 Rh1+ 38.Kc2 Rf2 39.a6 Rc1+ 40.Kd3 Rc3+ 41.Kd4 Kc6 42.a7 Rf4# 0-1`,
+    `[Date "2020-09-17"]
+    [Result "8-3"]
+    [White "Titan"]
+    [Black "Iceman"]
+    [Event "Queenside Castling"]
+    1.d4 Na6 2.e4 c5 3.d5 d6 4.Bb5+ Bd7 5.Nc3 g6 6.Qe2 Nc7 7.f4 a6 8.Bxd7+ Qxd7 9.Bd2 h5 10.O-O-O O-O-O 11.Nf3 Bh6 12.Rhe1 Nf6 13.e5 Ng4 14.h3 e6 15.hxg4 exd5 16.gxh5 gxh5 17.f5 Qxf5 18.exd6 Rxd6 19.Nh4 Qf6 20.Qxh5 Bg7 21.Qg4+ Kb8 22.Nf5 Bf8 23.Bf4 Qg6 24.Qxg6 fxg6 25.Nxd6 Bh6 26.Ne2 b5 27.Nf7 Rh7 28.Nxh6 Kb7 29.c3 Rh8 30.b4 cxb4 31.cxb4 Rc8 32.Nc3 Rd8 33.Re7 Ka8 34.Rxc7 Kb8 35.Rxd5 Re8 36.Kd2 Rf8 37.Rf7+ Ka8 38.Rxf8+ Kb7 39.Rb8+ Kc6 40.Nf7 g5 41.Nd8# 1-0`,
+    `[Date "2020-10-30"]
+    [Result "8-4"]
+    [White "Iceman"]
+    [Black "Titan"]
+    [Event "Winter is Coming"]
+    
+    1.e4 e5 2.Nf3 d6 3.Nc3 Nf6 4.Bb5+ c6 5.Bd3 Be6 6.O-O Nbd7 7.b4 Qb6 8.Ba3 d5 9.Re1 O-O-O 10.Qc1 a5 11.bxa5 Qxa5 12.Bxf8 Rhxf8 13.Qb2 Nc5 14.Rab1 d4 15.Ra1 Nxd3 16.cxd3 dxc3 17.dxc3 Rxd3 18.Reb1 b5 19.Qb4 Qa7 20.Qxf8+ Rd8 21.Qxg7 Nxe4 22.Rf1 Nxc3 23.Qxe5 Nxa2 24.h4 b4 25.Ng5 Bd5 26.Nxh7 Qc7 27.Qe2 Nc3 28.Ra8+ Kd7 29.Nf6+ Kd6 30.Qe8 Rxa8 31.Qxa8 Ne2+ 32.Kh1 Ke6 33.Re1 Bxg2+ 34.Kxg2 Qg3+ 35.fxg3 Kxf6 36.Rxe2# 1-0`,
   ];
 
 
